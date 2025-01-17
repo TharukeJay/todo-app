@@ -15,11 +15,11 @@ This is a full-stack **To-Do App** built with:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 ### **1️⃣ Backend (Node.js + Express + PostgreSQL)**
 - The backend provides a **REST API** to manage tasks.
 - Stores tasks in a **PostgreSQL database**.
-- Handles **CRUD operations** (Create, Read, Update, Delete).
+- Handles **Create, Read, Update operations** .
 - Uses **Jest** for unit tests.
 
 ### **2️⃣ Frontend (React.js)**
@@ -40,19 +40,19 @@ This is a full-stack **To-Do App** built with:
   - `backend` (Node.js server)
   - `frontend` (React app)
   - `postgres` (Database)
-- Simplifies deployment & local development.
+- Simplifies deployment.
 
 ---
 
 ## 🚀 How to Run the Project
 ### **🔹 Prerequisites**
 Ensure you have installed:
-- [Node.js](https://nodejs.org/) (v18+)
-- [Docker & Docker Compose](https://www.docker.com/)
+- [Node.js](https://nodejs.org/)
+- [Docker](https://www.docker.com/)
 
 ### **🔹 Clone the Repository**
 ```bash
-git clone https://github.com/your-repo/todo-app.git
+git https://github.com/TharukeJay/todo-app.git
 cd todo-app
 ```
 
@@ -72,14 +72,14 @@ CREATE DATABASE todoapp;
 
 #### **2. Setup Backend**
 ```bash
-cd backend
+cd task-backend
 npm install
 npm start
 ```
 
 #### **3. Setup Frontend**
 ```bash
-cd frontend
+cd task-frontend
 npm install
 npm start
 ```
@@ -89,13 +89,13 @@ npm start
 ## ✅ Running Tests
 ### **Backend Tests (Jest)**
 ```bash
-cd backend
+cd task-backend
 npm test
 ```
 
 ### **Frontend Tests (Jest + React Testing Library)**
 ```bash
-cd frontend
+cd task-frontend
 npm test
 ```
 
@@ -104,15 +104,15 @@ npm test
 ## 📂 Project Structure
 ```
 📦 todo-app
- ┣ 📂 backend  # Node.js + Express + PostgreSQL
- ┃ ┣ 📜 server.js  # Main server file
+ ┣ 📂 task-backend  # Node.js + Express + PostgreSQL
+ ┃ ┣ 📜 index.js  # Main server file
  ┃ ┣ 📜 db.js  # Database connection
  ┃ ┣ 📜 routes.js  # API routes
  ┃ ┣ 📂 tests  # Jest test cases
- ┣ 📂 frontend  # React.js UI
+ ┣ 📂 task-frontend  # React.js UI
  ┃ ┣ 📜 src/App.js  # Main React component
- ┃ ┣ 📜 src/api.js  # API calls
- ┃ ┣ 📂 src/__tests__  # Jest UI tests
+ ┃ ┣ 📜 src/ApiGateway  # API calls
+ ┃ ┣ 📂 src/tests  # Jest UI tests
  ┣ 📜 docker-compose.yml  # Docker setup
  ┣ 📜 README.md  # Documentation
 ```
@@ -120,18 +120,18 @@ npm test
 ---
 
 ## 📌 API Endpoints
-| Method | Endpoint | Description |
-|--------|---------|-------------|
-| `GET` | `/tasks` | Get all incomplete tasks (Max: 5) |
-| `POST` | `/tasks` | Create a new task |
-| `PUT` | `/tasks/:id/done` | Mark a task as completed |
+| Method | Endpoint                    | Description |
+|--------|-----------------------------|-------------|
+| `GET`  | `/api/task/task-create`     | Get all incomplete tasks (Max: 5) |
+| `POST` | `/api/task/task-get`        | Create a new task |
+| `POST` | `/api/task/task-update/:id` | Mark a task as completed |
 
 ---
 
 ## 🎯 Future Improvements
 - Add **user authentication** (Login/Register)
-- Store completed tasks instead of deleting them
+- Add a view for **completed tasks**
 - Implement **drag-and-drop** for task management
 
-🚀 **Enjoy building your To-Do App!**
+
 
