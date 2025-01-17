@@ -21,6 +21,7 @@ function TaskForm({addTask}) {
                     placeholder="Title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
+                    required
                 />
             </div>
             <div className="input-group">
@@ -28,6 +29,7 @@ function TaskForm({addTask}) {
                     placeholder= "Description"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
+                    required
                 />
             </div>
             <button type="submit" className="add-button">

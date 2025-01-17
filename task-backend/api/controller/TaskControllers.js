@@ -18,6 +18,14 @@ export const createTask = async (req, res, next) => {
 
     const { title, description } = req.body;
 
+    if (!title) {
+        return res.status(400).json({ error: 'title is required' });
+    }
+
+    if (!description) {
+        return res.status(400).json({ error: 'title is required' });
+    }
+
     try {
         const data = await executeCreateTask(title, description);
         res.status(200).json(data);
@@ -48,7 +56,7 @@ export const updateTask = async (req, res, next) => {
 
 export const deleteTask = async (req, res, next) => {
 
-    const { title, description } = req.body;
+    const { id } = req.params;
 
     try {
         const data = await executeDeleteTask(id);
