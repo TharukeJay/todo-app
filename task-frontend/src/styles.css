@@ -1,18 +1,21 @@
 .task-list {
     flex: 2;
     padding: 20px;
-    border-left: 2px solid #ccc;
+    border-left: 3px solid #989898;
 }
 
 .task {
-    background: #a5a5a5;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    background: #c3c3c3;
+    padding: 20px 20px 10px 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 0px 5px 5px #c5c5c5;
+    backdrop-filter: blur(20px);
 }
+
 
 .task-details h3 {
     margin: 0;
@@ -23,11 +26,12 @@
 }
 
 .done-btn {
-    background: #a5a5a5;
+    background: #c3c3c3;
     border: 1px solid black;
-    padding: 5px 10px;
+    padding: 5px 30px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .task-container {
@@ -45,6 +49,8 @@
     width: 50%;
     border-right: 1px solid #e5e7eb;
     padding-right: 32px;
+    padding-left: 20px;
+    padding-top: 50px;
 }
 
 .right-section {
@@ -55,7 +61,7 @@
 }
 
 .heading {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 500;
     margin-bottom: 16px;
 }
@@ -79,7 +85,7 @@
 .input-group input,
 .input-group textarea {
     padding: 8px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #cfcfcf;
     border-radius: 6px;
     font-size: 14px;
     width: 100%;
@@ -91,14 +97,15 @@
 }
 
 .add-button {
-    background-color: #2563eb;
+    background-color: #0033a5;
     color: white;
-    padding: 4px 16px;
+    padding: 6px 35px;
     border-radius: 6px;
     border: none;
     font-size: 14px;
     cursor: pointer;
-    align-self: flex-start;
+    align-self: flex-end;
+    margin-top: 10px;
 }
 
 .task-card {
@@ -115,13 +122,13 @@
 }
 
 .task-title {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 4px;
 }
 
 .task-description {
-    font-size: 14px;
+    font-size: 16px;
     color: #000000;
 }
 
