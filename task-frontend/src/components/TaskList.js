@@ -1,18 +1,16 @@
 import React from "react";
 
-function TaskList({ tasks, markTaskAsCompleted }) {
+function TaskList({tasks, markTaskAsCompleted}) {
     return (
-        <div>
-            {tasks.map((task) => (
-                <div className="task" key={task.id}>
+        <div className="task-list">
+            {tasks.map((task, index) => (
+                <div key={index} className="task">
                     <div className="task-details">
-                        <h4>{task.title}</h4>
-                        <p>{task.description}</p>
+                        <h3 className="task-title">{task.title}</h3>
+                        <p className="task-description">{task.description}</p>
                     </div>
-                    <button
-                        className="done-btn"
-                        onClick={() => markTaskAsCompleted(task.id)}
-                    >
+                    <button className="done-btn"
+                            onClick={() => markTaskAsCompleted(task.id)}>
                         Done
                     </button>
                 </div>

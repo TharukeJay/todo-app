@@ -14,19 +14,24 @@ function TaskForm({addTask}) {
 
     return (
         <form onSubmit={handleSubmit} className="task-form">
-            <h3>Add a Task</h3>
-            <input
-                type="text"
-                placeholder="Title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-            />
-            <textarea
-                placeholder="Description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-            />
-            <button type="submit">Add</button>
+            <div className="input-group">
+                <label>Title</label>
+                <input
+                    type="text"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                />
+            </div>
+            <div className="input-group">
+                <label>Description</label>
+                <textarea
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                />
+            </div>
+            <button type="submit" className="add-button">
+                Add
+            </button>
         </form>
     );
 }

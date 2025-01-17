@@ -61,18 +61,30 @@ function App() {
         //     }
         // </div>
 
-        <div>
-            <div className="container">
-                    <div className="task-form">
-                        <TaskForm addTask={addTask}/>
-                    </div>
+        // <div>
+        //     <div className="container">
+        //             <div className="task-form">
+        //                 <TaskForm addTask={addTask}/>
+        //             </div>
+        //
+        //             <div className="task-list">
+        //                 <TaskList tasks={tasks} markTaskAsCompleted={markTaskAsCompleted}/>
+        //             </div>
+        //     </div>
+        // </div>
 
-                    <div className="task-list">
-                        <TaskList tasks={tasks} markTaskAsCompleted={markTaskAsCompleted}/>
-                    </div>
-            </div>
-        </div>
-    );
-}
+        <>
+            <div className="task-container">
+                <div className="left-section">
+                    <h2 className="heading">Add a Task</h2>
+                    <TaskForm addTask={addTask}/>
+                </div>
+                <div className="right-section">
+                    <TaskList tasks={tasks} markTaskAsCompleted={markTaskAsCompleted}/>
+                </div>
+                </div>
+            </>
+            );
+            }
 
-export default App;
+            export default App;
