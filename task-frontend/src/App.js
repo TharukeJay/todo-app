@@ -33,10 +33,10 @@ function App() {
     // Fetch all tasks
     const fetchTasks = async () => {
         setLoading(true);
-        // const res = await API_ENDPOINT.get(FETCH_ALL_TASKS)
-        // console.log(res.data)
-        // setTasks(res.data)
-        // setLoading(false);
+        const res = await API_ENDPOINT.get(FETCH_ALL_TASKS)
+        console.log(res.data)
+        setTasks(res.data)
+        setLoading(false);
     }
 
 
